@@ -28,7 +28,7 @@ def interact(event):
 
 def interact(event):
 	# This will use arg 1 (item), 0, and the amount you need to withdraw of arg 1
-    if event.player.removeItem("soupamod:goldcoin", 0, 10):
+	if event.player.removeItem("soupamod:goldcoin", 0, 10):
 		# fetch the user's account by loading the whole damn database
 		accounts = {}
 		with open('D:\data\accounts.csv') as csvfile:
@@ -48,8 +48,8 @@ def interact(event):
 			writer.writeheader()
 			for i in accounts: # loop through each account and write it to the csv
 				writer.writerow("user": i, "balance": accounts[i])
-	# now go check the actual file & see if it worked
-	    event.npc.say("Gold deposited.")
-    else:
-	    event.npc.say("You don't have enough gold to make the deposit.")
+		# now go check the actual file & see if it worked
+		event.npc.say("Gold deposited.")
+	else:
+		event.npc.say("You don't have enough gold to make the deposit.")
 			
