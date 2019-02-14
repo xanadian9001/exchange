@@ -10,6 +10,12 @@
 # 4.  Repair *all* the holes (where there is minecraft:air) to "reset" the board.  The magma stays.
 # Note that the locations of events 1-3 are random.  You could easily change it so that the "warning blocks"
 # are placed UNDER some random player, but I didn't do that here.
+#
+# Forgot to mention:  the "repair all the holes" portion of the code may freeze your game for a short bit, or 
+# for longer than that.  :-/  If I can figure out a better way of filling the holes without having to scan every 
+# single block, then I'll update this script.  Wish I could just copy a schematic from a repository somewhere...
+# Alternatively, this thing can be reprogrammed to use a *square* board.  Then you could just use 
+# executeCommand("execute @s ~ ~ ~ fill etc etc etc)...
 
 import math
 import time
